@@ -3,21 +3,20 @@ package controler;
 import java.util.Scanner;
 
 import model.AplCalcular;
+import view.View;
 
 public class Controlador {
 	private AplCalcular aplCalcular = new AplCalcular();
-	private Scanner read = new Scanner(System.in);
+	private View view = new View();
 	
 	public void start(){
 		Integer resultado;
 		try{
-			System.out.print("Insira o calculo do saci para eu calcular :D => ");
-			resultado = aplCalcular.calcular(read.nextLine());
-			System.out.println(resultado);
+			resultado = aplCalcular.calcular(view.getValue());
+			view.printResultado(resultado);
 		}
 		catch(Exception e){
-			System.out.println("DEU ZICA");
+			view.printError();
 		}
-		
 	}
 }
