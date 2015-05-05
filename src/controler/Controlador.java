@@ -3,20 +3,25 @@ package controler;
 import java.util.Scanner;
 
 import model.AplCalcular;
-import view.View;
+import model.AplTradutorNotacao;
+import view.ViewConsole;
 
 public class Controlador {
 	private AplCalcular aplCalcular = new AplCalcular();
-	private View view = new View();
+	private ViewConsole view = new ViewConsole();
 	
 	public void start(){
 		Integer resultado;
+		String notacao;
 		try{
-			resultado = aplCalcular.calcular(view.getValue());
+			notacao = view.getValue();
+			//notacao = AplTradutorNotacao.ocidentalToPolonesa(notacao);
+			resultado = aplCalcular.calcular(notacao);
 			view.printResultado(resultado);
 		}
 		catch(Exception e){
 			view.printError();
+			e.printStackTrace();
 		}
 	}
 }
