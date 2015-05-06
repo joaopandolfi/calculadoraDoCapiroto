@@ -1,4 +1,4 @@
-package view;
+package calculadora.view;
 
 public interface View {
 	public String getValue();

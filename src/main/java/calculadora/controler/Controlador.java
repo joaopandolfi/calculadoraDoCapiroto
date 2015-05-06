@@ -1,10 +1,8 @@
-package controler;
+package calculadora.controler;
 
-import java.util.Scanner;
-
-import model.AplCalcular;
-import model.AplTradutorNotacao;
-import view.ViewConsole;
+import calculadora.model.AplCalcular;
+import calculadora.model.AplTradutorNotacao;
+import calculadora.view.ViewConsole;
 
 public class Controlador {
 	private AplCalcular aplCalcular = new AplCalcular();
@@ -15,7 +13,7 @@ public class Controlador {
 		String notacao;
 		try{
 			notacao = view.getValue();
-			//notacao = AplTradutorNotacao.ocidentalToPolonesa(notacao);
+			notacao = AplTradutorNotacao.ocidentalToPolonesa(notacao);
 			resultado = aplCalcular.calcular(notacao);
 			view.printResultado(resultado);
 		}

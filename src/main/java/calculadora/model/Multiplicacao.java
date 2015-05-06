@@ -1,4 +1,4 @@
-package model;
+package calculadora.model;
 
 public class Multiplicacao implements Operacao{
 

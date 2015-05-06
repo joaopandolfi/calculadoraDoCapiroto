@@ -1,4 +1,4 @@
-package view;
+package calculadora.view;
 
 import java.util.Scanner;
 

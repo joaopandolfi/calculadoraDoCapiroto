@@ -1,4 +1,6 @@
-import controler.Controlador;
+package calculadora;
+
+import calculadora.controler.Controlador;
 
 
 public class Main {

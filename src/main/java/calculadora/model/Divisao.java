@@ -1,4 +1,4 @@
-package model;
+package calculadora.model;
 
 public class Divisao implements Operacao{
 

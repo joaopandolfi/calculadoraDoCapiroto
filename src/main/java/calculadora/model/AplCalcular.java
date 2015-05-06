@@ -1,4 +1,4 @@
-package model;
+package calculadora.model;
 
 import java.util.HashMap;
 import java.util.Stack;
@@ -15,7 +15,7 @@ public class AplCalcular {
 		operacoes.put("*", new Multiplicacao());
 	}
 	
-	//se acontecer excessao quem controla é o CCI, ou seja, a GUI
+	//se acontecer excessao quem controla ï¿½ o CCI, ou seja, a GUI
 	public int calcular(String expressao) throws Exception{
 		Operacao operacao;
 		Integer resultado = 0;
@@ -26,7 +26,7 @@ public class AplCalcular {
 		for(String operando : elementos){
 			//se for um operando
 			if(operacoes.containsKey(operando)){
-				//recupero a operação correta requerida
+				//recupero a operaï¿½ï¿½o correta requerida
 				operacao = operacoes.get(operando);
 				//recupero os operandos da pilha
 				operando2 = operandos.pop();
@@ -36,7 +36,7 @@ public class AplCalcular {
 				//insiro o resultado na pilha
 				operandos.push(resultado);
 			}else{
-				//se não for um operando, insere na pilha
+				//se nï¿½o for um operando, insere na pilha
 				operandos.push(Integer.parseInt(operando));
 			}
 		}
