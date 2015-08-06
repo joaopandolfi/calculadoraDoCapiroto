@@ -1,4 +1,4 @@
-# calculadoraDoCapiroto
+# Calculadora Polonesa Reversa 
 Calculadora polonesa reversa
 
 O programa está implementado usando o conceito MVC (Model View Controler).
